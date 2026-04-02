@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import CelebrityVideoGrid from "@/components/CelebrityVideoGrid";
+import QuestionFlow from "@/components/QuestionFlow";
 
 export default function HomePage() {
   return (
@@ -12,7 +13,7 @@ export default function HomePage() {
       <section className="section">
         <div className="section-heading-wrap">
           <p className="eyebrow">Featured Voices</p>
-          <h2 className="section-title">
+          <h2 className="section-title" id="featured-videos">
             Celebrities answer the 7 questions for your soul
           </h2>
           <p className="section-copy max-copy">
@@ -26,32 +27,18 @@ export default function HomePage() {
         <CelebrityVideoGrid />
       </section>
 
-      <section className="section">
-        <div className="question-placeholder-card">
-          <div className="placeholder-topline" />
+      <section className="section" id="questions-coming-next">
+        <div className="section-heading-wrap">
           <p className="eyebrow">Interactive Experience</p>
-          <h2 className="section-title">The 7-question experience is next</h2>
+          <h2 className="section-title">Answer the 7 questions</h2>
           <p className="section-copy max-copy">
-            In the next step, we will build the full question flow with language
-            selection, previous and next toggles, answer saving, video or audio
-            response links, and the final submission experience.
+            Choose a country and language context, reflect on each question,
+            move forward or back at your own pace, and save your written answer
+            or add a video or audio response link.
           </p>
-
-          <div className="placeholder-grid">
-            <div className="placeholder-box">
-              <span>Language selector</span>
-            </div>
-            <div className="placeholder-box">
-              <span>Question progress</span>
-            </div>
-            <div className="placeholder-box">
-              <span>Answer area</span>
-            </div>
-            <div className="placeholder-box">
-              <span>Next / Back navigation</span>
-            </div>
-          </div>
         </div>
+
+        <QuestionFlow />
       </section>
 
       <footer className="site-footer">
